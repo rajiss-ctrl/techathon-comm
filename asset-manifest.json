@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/techathon-comm/static/css/main.ea0cb664.css",
-    "main.js": "/techathon-comm/static/js/main.cdc5675b.js",
+    "main.js": "/techathon-comm/static/js/main.5b3f0763.js",
     "static/js/787.966b4a23.chunk.js": "/techathon-comm/static/js/787.966b4a23.chunk.js",
     "static/media/herovideo.mp4": "/techathon-comm/static/media/herovideo.81ab59519d424c06d269.mp4",
     "static/media/teechaLADYONPC-removebg-preview.png": "/techathon-comm/static/media/teechaLADYONPC-removebg-preview.3cfa68cc0849a025fc19.png",
     "static/media/teechaCONTENTIMG.png": "/techathon-comm/static/media/teechaCONTENTIMG.4046ed6943a659a3efc7.png",
     "index.html": "/techathon-comm/index.html",
     "main.ea0cb664.css.map": "/techathon-comm/static/css/main.ea0cb664.css.map",
-    "main.cdc5675b.js.map": "/techathon-comm/static/js/main.cdc5675b.js.map",
+    "main.5b3f0763.js.map": "/techathon-comm/static/js/main.5b3f0763.js.map",
     "787.966b4a23.chunk.js.map": "/techathon-comm/static/js/787.966b4a23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea0cb664.css",
-    "static/js/main.cdc5675b.js"
+    "static/js/main.5b3f0763.js"
   ]
 }
