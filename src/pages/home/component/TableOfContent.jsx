@@ -19,7 +19,7 @@ const TableOfContent = () => {
               padding={['0','0','0',' 0 3.5px 0 0']}
               >
             <Heading fontSize={['14px','14px','16px','16px']}>Access to all Class Notes & Assignments</Heading>
-            <Text>Teecha gives you access to all the subjects from JSS1 to SS3</Text>
+            <Text>SchlBox gives you access to all the subjects from JSS1 to SS3</Text>
         </Box>
         <Box 
             width={['100%','100%','100%','33.33%']} 

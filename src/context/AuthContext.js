@@ -10,11 +10,16 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 
+const userState = JSON.parse(sessionStorage.getItem('user')) || null
+
 export const provider = new GoogleAuthProvider()
 // signInWithPopup,
 const userAuthContext = createContext();
 export function UserAuthContextProvider({ children }) {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(userState);
+    useEffect(()=>{
+        sessionStorage.setItem('user',JSON.stringify(user))
+    },[user]);
   function logIn(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
   }

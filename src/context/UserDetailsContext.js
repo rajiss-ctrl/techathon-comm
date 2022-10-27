@@ -1,18 +1,19 @@
 import { collection, getDocs } from "firebase/firestore";
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import { createContext,  useEffect,  useState } from "react";
 import { db } from "../firebase/firebase";
-import UserDetailsReducer from "./UserDetailsReducer";
+
+const UserInitState = JSON.parse(sessionStorage.getItem('userdetail')) || null
 
 
 
 export const UserDetailsContext = createContext();
 export const UserDetailsContextProvider = ({children}) => {
-    const [userDataDetails, setUserDataDetails] = useState(null);
+    const [userDataDetails, setUserDataDetails] = useState(UserInitState);
     
 
-    // useEffect(()=>{
-    //     localStorage.setItem('userdetail',JSON.stringify(state.userDataDetails))
-    // },[state.userDataDetails]);
+    useEffect(()=>{
+        sessionStorage.setItem('userdetail',JSON.stringify(userDataDetails))
+    },[userDataDetails]);
 
     //feching from usercollections
 useEffect(()=>{

@@ -92,7 +92,7 @@ uploadTask.on('state_changed',
 }
 file && uploadFile()
 }, [])
-
+ console.log(file)
 return (
     <Box >
       <Flex 
@@ -214,7 +214,7 @@ return (
               />
         </FormControl>
           {/* disable={perc !== null && perc < 100} */}
-        <Button   margin={'20px'} color={'#fff'} background={perc !== null && perc < 100 ? 'red' : 'rgb(9, 140, 255)' } type={'submit'}>Update profile</Button>
+        <Button   margin={'20px'} color={'#fff'}  type={'submit'}>Update profile</Button>
       </Flex>
     </Box>
   )

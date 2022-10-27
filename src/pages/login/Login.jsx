@@ -8,12 +8,10 @@ import { FaGoogle } from 'react-icons/fa';
 // import { FaCheck, FaGoogle, FaInfoCircle, FaTimes } from 'react-icons/fa'
 
 
-// import { signInWithEmailAndPassword } from 'firebase/auth';
-
 const Login = ({isOpen,toggle}) => {
   const { logIn } = useUserAuth();
   const navigate = useNavigate()
-  // const errMsg = <p>Email or Password is imcorrect!</p>;
+  const errMsg = <p>Network error or your input is incorrect!</p>;
 
   // const [userData,setUserData] = useState(userDetails)
   const [email,setEmail] = useState('')
@@ -27,9 +25,9 @@ const Login = ({isOpen,toggle}) => {
       await logIn(email, password);
       navigate("/teacherdasboard");
     } catch (err) {
-      setError(err.message);
+      setError(errMsg);
     }
- } 
+    } 
 
 async function handleGoogleSignin(){
   const auth= getAuth();
@@ -37,18 +35,18 @@ async function handleGoogleSignin(){
       await signInWithPopup(auth,provider);
       navigate("/teacherdasboard");
   } catch (err) {
-      setError(err.message);
-}
+      setError(errMsg);
+  }
   } 
 
   return (
-  <Box width={'100%'} onClick={isOpen && toggle}>
+<Box width={'100%'} onClick={isOpen && toggle}>
     
-    <Box>
+<Box>
 <Flex width={['250px','400px','550px','600px']} flexDirection={'column'} alignItems={'center'} onSubmit={handleLogin} as={'form'}>
-  <Heading width={['200px','100%','100%','100%']} fontSize={'17px'}>Login To Dashboard</Heading>
-  <FormControl isRequired mt={6}>
-  <FormLabel>Email</FormLabel>
+  <Heading width={['100%','100%','100%','100%']} fontSize={'17px'}>Login To Dashboard</Heading>
+<FormControl isRequired mt={6}>
+<FormLabel>Email</FormLabel>
     <Input
       width={'100%'}
       focusBorderColor={'none'}
@@ -62,11 +60,9 @@ async function handleGoogleSignin(){
       size="lg"
       onChange={(e)=>{setEmail(e.target.value)}}
     />
-    </FormControl>
-    
-  
-    <FormControl isRequired mt={6}>
-    <FormLabel>Password</FormLabel>
+</FormControl>
+<FormControl isRequired mt={6}>
+<FormLabel>Password</FormLabel>
     <Input
       width={'100%'}
       focusBorderColor={'none'}
@@ -80,7 +76,7 @@ async function handleGoogleSignin(){
       size="lg"
       onChange={(e)=>{setPassword(e.target.value)}}
     />
-    </FormControl >
+</FormControl >
   
     <Box marginTop={['20px','0','0','0']} width="100%" display={'flex'} justifyContent={['space-evenly']} flexDirection={['column','column','row','row']} gap={'10px'}>
       <Button color={'#fff'}  background={'rgb(9, 140, 255)'} width={['250px','100%','30%','30%']} type='submit'>

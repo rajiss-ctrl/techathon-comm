@@ -1,15 +1,18 @@
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Spinner } from '@chakra-ui/react'
 import React from 'react'
+
 
 const ProgressCard = () => {
   return (
     <Box padding={'100px 0 100px 0 '} background={'rgb(229, 243, 255)'}>
+        <Spinner/>
         <Heading 
                 margin={['0 0 20px 0','0 0 50px 0']} 
                 fontSize={['12px','14px','16px','16px']} 
                 textAlign={'center'}
                 padding={['0 20px','0 20px','0 30px','0']}
-                >Teecha gives you access to thousands of education contents suitable for both the Nigerian Student and Teacher</Heading>
+                >SchlBox gives you access to thousands of education contents suitable for both the Nigerian Student and Teacher</Heading>
         <Box 
             display={'flex'} 
             alignItems={'center'} 
@@ -29,7 +32,7 @@ const ProgressCard = () => {
                 <Box background={'rgb(9, 140, 255)'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'50%'} width={'80px'} height={'80px'}>
                 <Text color={'#fff'} >5m+</Text>
                 </Box>
-                <Text fontSize={['12px','12px','12px','14px']} padding={'0 10px'} textAlign={'center'}>Lifetime learner who have learnt with Teecher.com</Text>
+                <Text fontSize={['12px','12px','12px','14px']} padding={'0 10px'} textAlign={'center'}>Lifetime learner who have learnt with SchlBox.com</Text>
             </Box>
             <Box 
                 boxShadow='rgb(9, 140, 255) 0px 5px 15px'  
@@ -42,7 +45,7 @@ const ProgressCard = () => {
                     <Box background={'rgb(9, 140, 255)'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'50%'} width={'80px'} height={'80px'}>
                     <Text color={'#fff'} >5m+</Text>
                     </Box>
-                    <Text fontSize={['12px','12px','12px','14px']} padding={'0 10px'} textAlign={'center'}>Seek Career advice on teecher</Text>
+                    <Text fontSize={['12px','12px','12px','14px']} padding={'0 10px'} textAlign={'center'}>Seek Career advice on SchlBox</Text>
             </Box>
             <Box 
                 boxShadow='rgb(9, 140, 255) 0px 5px 15px'  

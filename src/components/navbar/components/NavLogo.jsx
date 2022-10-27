@@ -6,10 +6,10 @@ export default function NavLogo() {
   return (
     <Box  >
       <Link  to='/'><Text 
-                    fontSize={['14px','14px','16px','16px']} 
+                    fontSize={['14px','14px','18px','18px']} 
                     paddingLeft={{base:'30px', sm:'60px'}} 
                     fontWeight="bold">
-        TEECHA
+        SchlBox
       </Text></Link>
     </Box>
   )
