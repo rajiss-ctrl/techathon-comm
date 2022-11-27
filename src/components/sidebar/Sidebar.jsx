@@ -1,7 +1,9 @@
-import {Box, Heading, List, ListItem, Text, VStack } from '@chakra-ui/react'
+import {Box, Heading, Image, List, ListItem, Text, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { FaDoorOpen, FaHome, FaImage, FaLocationArrow, FaSignOutAlt, FaUserAlt } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
+import Assignment from '../../assets/images/assignment.svg'
+import Dashboard from '../../assets/images/classroom.svg'
 import { useUserAuth } from '../../context/AuthContext'
 
 const Sidebar = ({showModal,handleProfileUpdate,reduceList,handleSideBarToggle}) => {
@@ -45,7 +47,7 @@ const Sidebar = ({showModal,handleProfileUpdate,reduceList,handleSideBarToggle})
                           reduceList ? '17px' : '6px']}
                           padding={['5px','5','0','0']} 
                 marginTop={'20px'}
-                ><Link to='/'>TEECHER</Link></Heading>
+                ><Link to='/'>SchlBox</Link></Heading>
      <Box 
           onClick={handleSideBarToggle} 
           display={'flex'} 
@@ -92,14 +94,14 @@ const Sidebar = ({showModal,handleProfileUpdate,reduceList,handleSideBarToggle})
                     display={'flex'}
                     gap={'5px'} 
                     alignItems={'center'}
-                    ><Box color={'#000'}
+                    ><Box color={'pink'}
                           fontSize={[reduceList ? '13px' : '11px',
                           reduceList ? '14px' : '13px',
-                          reduceList ? '17px' : '12px',
-                          reduceList ? '17px' : '12px']}
+                          reduceList ? '25px' : '12px',
+                          reduceList ? '25px' : '12px']}
                           >
                       <FaHome/>
-                      </Box><Box display={ reduceList ? 'block' : 'none'}>Home</Box></ListItem>
+                      </Box><Box fontFamily={'Red Rose'} display={ reduceList ? 'block' : 'none'}>Home</Box></ListItem>
           </Link>
           <Link to="/teacherdasboard"
                 ><ListItem 
@@ -112,8 +114,8 @@ const Sidebar = ({showModal,handleProfileUpdate,reduceList,handleSideBarToggle})
                           reduceList ? '17px' : '12px',
                           reduceList ? '17px' : '12px']}
                           >
-                      <FaLocationArrow/>
-                      </Box><Box display={ reduceList ? 'block' : 'none'}>Dashboard</Box></ListItem>
+                      <Image src={Dashboard} alt='dashboard'/>
+                      </Box><Box fontFamily={'Red Rose'} display={ reduceList ? 'block' : 'none'}>Dashboard</Box></ListItem>
           </Link>
           <Link to="/"
                 ><ListItem 
@@ -126,22 +128,23 @@ const Sidebar = ({showModal,handleProfileUpdate,reduceList,handleSideBarToggle})
                           reduceList ? '17px' : '12px',
                           reduceList ? '17px' : '12px']}
                           >
-                      <FaUserAlt/>
-                      </Box><Box display={ reduceList ? 'block' : 'none'}>Assignment</Box></ListItem>
+                      <Image src={Assignment} alt='assignment'/>
+                      </Box><Box fontFamily={'Red Rose'} display={ reduceList ? 'block' : 'none'}>Assignment</Box></ListItem>
           </Link>
           <Link to="/"
                 ><ListItem 
                     display={'flex'}
                     gap={'5px'} 
                     alignItems={'center'}
-                    ><Box color={'red'}
+                    ><Box color={'pink'}
                           fontSize={[reduceList ? '13px' : '11px',
                           reduceList ? '14px' : '13px',
                           reduceList ? '17px' : '12px',
                           reduceList ? '17px' : '12px']}
+                          fontWeight={'300'}
                           >
                       <FaSignOutAlt/>
-                      </Box><Box onClick={handleLogout} display={ reduceList ? 'block' : 'none'}>Logout</Box></ListItem>
+                      </Box><Box fontFamily={'Red Rose'} onClick={handleLogout} display={ reduceList ? 'block' : 'none'}>Logout</Box></ListItem>
           </Link>
         </List>
       </Box>

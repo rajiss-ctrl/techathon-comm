@@ -36,11 +36,13 @@ const NavMenuItem = ({toggle, isOpen }) => {
           flexDirection={['column', 'row', 'row', 'row']}
           paddingLeft={['0', '60px', '0', '0']}
           pt={[4, 4, 0, 0]}
+          fontFamily={'Red Rose'}
+          fontWeight={'400'}
         >
-            <ListItem padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>How It Work</ListItem>
-            <Link to='/courses'><ListItem padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>Courses</ListItem></Link>
-            <Link to='/teacherdasboard'><ListItem padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>Dashboard</ListItem></Link>
-            <Link  to='/getstarted'><ListItem padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>Get Started</ListItem></Link>
+            <ListItem fontFamily={'Red Rose'} padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>How It Work</ListItem>
+            <Link to='/courses'><ListItem fontFamily={'Red Rose'} padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>Courses</ListItem></Link>
+            <Link to='/teacherdasboard'><ListItem fontFamily={'Red Rose'} padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>Dashboard</ListItem></Link>
+            <Link  to='/getstarted'><ListItem fontFamily={'Red Rose'} padding={{base:'0 0 30px 0', sm:'0 15px 0 0'}}>Get Started</ListItem></Link>
         </List>
       </Box>
     </Flex>

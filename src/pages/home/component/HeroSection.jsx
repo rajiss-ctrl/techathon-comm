@@ -45,31 +45,36 @@ const HeroSection = () => {
               justifyContent={'center'} 
               flexDirection={'column'} 
               alignItems={'center'}>
-            <Heading 
+            <Heading
+                    fontWeight={'700'}
+                    fontFamily={'Red Rose'} 
                     textAlign={'center'} 
-                    fontSize={['10px', '22px', '35px', '35px']}
-                    fontWeight={'bold'} 
+                    fontSize={['10px', '22px', '35px', '40px']}
                     color={'#fff'}
                     padding={['0 2%', '0 2%', '1% 2%', '1% 12%']}
                     >TAKE CONTROL OF EDUCATIONAL SCHEDULES AND TODO'S ANYTIME, ANY WHERE.</Heading>
             <Text 
-
+                  fontFamily={'Red Rose'}
+                  fontWeight={'400'}
                   textAlign={'center'}
-                  fontSize={['8px', '14px', '16px', '16px']} 
+                  fontSize={['8px', '14px', '16px', '18px']} 
                   padding={['0 2%', '0 3%', '1% 26%', '1% 26%']} 
                   color={'#fff'}
                   >Super simple time mangement, self studying, peer to peer collaborative
                   learning both for teachers and students</Text>
 
                   <Box marginTop={{base:'15px', sm:'20px'}}>
-                    <Link to='/getstarted'><Button 
+                    <Link to='/getstarted'><Button
+                          _hover={'none'}
+                          fontFamily={'Red Rose'}
+                          fontWeight={'400'} 
                           width={['80px', '100px','120px', '120px']}
                           height={{base:'32px', sm:'40px'}} 
                           fontSize={['12px', '12px','14px', '16px']}
                           focusBorder={'none'}
                           focusBorderColor={'none'}
-                          background={'#fff'}
-                          color={'#000'}
+                          background={'#ffffff'}
+                          color={'#000000'}
                           >Get Started</Button></Link>
                   </Box>
           </Box>

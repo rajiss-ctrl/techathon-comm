@@ -59,7 +59,7 @@ const Signup = ({isOpen,toggle}) => {
                 required
                 />
             </FormControl>
-            <Button width={['240px','400px','540px','100%']} marginTop={'25px'} background={'rgb(9, 140, 255)'} color={'#fff'} type="submit">Regidter</Button>
+            <Button width={['240px','400px','540px','100%']} fontFamily={'Red Rose'} _hover={'none'} color={'#FFFFFF'} marginTop={'25px'} background={'rgb(9, 140, 255)'}  type="submit">Regidter</Button>
 
     </Flex>
     </Box>

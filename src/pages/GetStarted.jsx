@@ -18,8 +18,8 @@ const GetStarted = ({isOpen,toggle}) => {
         <Box onClick={isOpen && toggle} padding={['0 20px','30px','0 25%','0 27%']} width={'100%'} height={'60%'}  display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
             <Box width={'100%'}textAlign={'center'} margin={'100px 0px'}>
                  {!showLogin ? 
-                <Button onClick={ renderLoginPage } background={'green'} color={'#ffffff'}><FaSignInAlt/> Login</Button> :
-                <Button onClick={renderLoginPage} background={'blue'} color={'orange'} ><FaSign/> Sign Up</Button>}
+                <Button onClick={ renderLoginPage } fontFamily={'Red Rose'} _hover={'none'}  background={'green'} color={'#ffffff'}><FaSignInAlt/> Login</Button> :
+                <Button onClick={renderLoginPage} fontFamily={'Red Rose'} _hover={'none'}   background={'blue'} color={'purple'} ><FaSign/> Sign Up</Button>}
             </Box>
             <Box width={['100%','100%','40%','40%']} display={'grid'} placeContent={'center'}>
                 {showLogin ? <Login/>  : <Signup/>}

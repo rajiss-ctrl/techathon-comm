@@ -44,7 +44,7 @@ async function handleGoogleSignin(){
     
 <Box>
 <Flex width={['250px','400px','550px','600px']} flexDirection={'column'} alignItems={'center'} onSubmit={handleLogin} as={'form'}>
-  <Heading width={['100%','100%','100%','100%']} fontSize={'17px'}>Login To Dashboard</Heading>
+  <Heading fontFamily={'Red Rose'} width={['100%','100%','100%','100%']} fontSize={'17px'}>Login To Dashboard</Heading>
 <FormControl isRequired mt={6}>
 <FormLabel>Email</FormLabel>
     <Input
@@ -79,14 +79,14 @@ async function handleGoogleSignin(){
 </FormControl >
   
     <Box marginTop={['20px','0','0','0']} width="100%" display={'flex'} justifyContent={['space-evenly']} flexDirection={['column','column','row','row']} gap={'10px'}>
-      <Button color={'#fff'}  background={'rgb(9, 140, 255)'} width={['250px','100%','30%','30%']} type='submit'>
+      <Button color={'#fff'} fontFamily={'Red Rose'} _hover={'none'}    background={'rgb(9, 140, 255)'} width={['250px','100%','30%','30%']} type='submit'>
         Login
       </Button>
-      <Button width={['250px','100%','23%','25%']} display={'flex'} gap={'5px'} color={'green'} background={'black'} onClick={handleGoogleSignin}>
+      <Button fontFamily={'Red Rose'} _hover={'none'}  width={['250px','100%','23%','25%']} display={'flex'} gap={'5px'} color={'green'} background={'black'} onClick={handleGoogleSignin}>
         <Text fontSize={'15px'}>Google Sign In</Text>  
         <Box fontSize={'18px'} color={'red'}> <FaGoogle/></Box>
       </Button>
-      <Button width={['250px','100%','23%','23%']}  color={'black'} background={'transparent'}>
+      <Button fontFamily={'Red Rose'} _hover={'none'}  width={['250px','100%','23%','23%']}  color={'black'} background={'transparent'}>
         <Text>Forgot Password ?</Text>
       </Button>
     </Box>

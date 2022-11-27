@@ -8,6 +8,8 @@ const Navbar = ({isOpen,toggle}) => {
         <>
           <Flex 
               onClick={isOpen && toggle}
+              fontFamily={'Red Rose'}
+              fontWeight={'400'}
                width={'100%'} 
                justifyContent={'space-between'} 
                height={{base:'auto', sm:'60px'}}
