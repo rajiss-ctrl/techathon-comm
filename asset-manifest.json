@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/techathon-comm/static/css/main.ea0cb664.css",
-    "main.js": "/techathon-comm/static/js/main.5b3f0763.js",
+    "main.css": "/techathon-comm/static/css/main.ebfce534.css",
+    "main.js": "/techathon-comm/static/js/main.f3568176.js",
     "static/js/787.966b4a23.chunk.js": "/techathon-comm/static/js/787.966b4a23.chunk.js",
     "static/media/herovideo.mp4": "/techathon-comm/static/media/herovideo.81ab59519d424c06d269.mp4",
     "static/media/teechaLADYONPC-removebg-preview.png": "/techathon-comm/static/media/teechaLADYONPC-removebg-preview.3cfa68cc0849a025fc19.png",
     "static/media/teechaCONTENTIMG.png": "/techathon-comm/static/media/teechaCONTENTIMG.4046ed6943a659a3efc7.png",
     "index.html": "/techathon-comm/index.html",
-    "main.ea0cb664.css.map": "/techathon-comm/static/css/main.ea0cb664.css.map",
-    "main.5b3f0763.js.map": "/techathon-comm/static/js/main.5b3f0763.js.map",
+    "static/media/assignment.svg": "/techathon-comm/static/media/assignment.abbcdb655ebb29df543a70349f79f9bf.svg",
+    "static/media/classroom.svg": "/techathon-comm/static/media/classroom.4e100635344d79b92fc4930a0dd9f91d.svg",
+    "main.ebfce534.css.map": "/techathon-comm/static/css/main.ebfce534.css.map",
+    "main.f3568176.js.map": "/techathon-comm/static/js/main.f3568176.js.map",
     "787.966b4a23.chunk.js.map": "/techathon-comm/static/js/787.966b4a23.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea0cb664.css",
-    "static/js/main.5b3f0763.js"
+    "static/css/main.ebfce534.css",
+    "static/js/main.f3568176.js"
   ]
 }
