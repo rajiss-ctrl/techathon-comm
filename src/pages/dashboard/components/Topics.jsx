@@ -1,4 +1,4 @@
-import { Box,Button,Flex,Heading,ListItem,OrderedList,TableCaption,Text } from '@chakra-ui/react'
+import { Box,Button,Flex,Heading,ListItem,OrderedList,Spinner,TableCaption,Text } from '@chakra-ui/react'
 import { collection, getDocs } from 'firebase/firestore'
 import React,{useContext, useState,useEffect} from 'react'
 import { FaEdit, FaMarkdown, FaTimes, FaTrash } from 'react-icons/fa'
@@ -8,7 +8,7 @@ import { db } from '../../../firebase/firebase'
 import SubTopicsModal from './SubTopicsModal'
 
 const Topics = ({dataDetails}) => {
-const [curriculum, setCurriculum] = useState([]);
+const [curriculum, setCurriculum] = useState(null);
 const [show,setShow] = useState(-1)
 
 
@@ -52,23 +52,25 @@ console.log(userDataDetails)
   const handleSubTopicModal =()=>{
   setSubtopic(!subtopic)
 }
-  return (
+
+return (
     <>
      {/* list of topics and progress */}
 
     <Box padding={'20px'}>
-      <Text display={'flex'} paddingLeft={['30px','30px','0','0']}><pre>Course : </pre>{ userDataDetails.map((item)=>{ return <div key={item.id}>
-                      <di>{user.uid === item.id && <Box>{item.course}</Box> }</di>
+      <Text display={'flex'} paddingLeft={['30px','30px','0','0']}>{ userDataDetails.map((item)=>{ return <div key={item.id}>
+                      <di>{user.uid === item.id && <Heading fontSize={'16px'} display={'flex'} justifyContent={'center'} alignItems={'center'}><Box fontFamily={'Red Rose'}><Heading fontSize={'18px'} color={'blue'} paddingRight={'5px'}>Course : </Heading></Box>{item.course}</Heading> }</di>
                 </div>}) }</Text>
-<Box width={'100%'}  >
-    {/* <TableCaption  fontSize={'20px'}>Coriculum</TableCaption> */}
-  
+    <Box width={'100%'}  >
       <Flex width={'100%'} justifyContent={'space-between'} marginBottom={'15px'}>
         <Box ><Heading fontSize={['12px','14px','16px','16px']} paddingLeft={['30px','30px','0','0']}>WEEK</Heading></Box>
         <Box><Heading fontFamily={'Red Rose'} fontSize={['12px','14px','16px','16px']} >TOPICS</Heading></Box>
         <Box > <Heading fontFamily={'Red Rose'} fontSize={['12px','14px','16px','16px']} >UPDATES</Heading></Box>
       </Flex>
-      <OrderedList>
+      {
+        !curriculum ? <Box color={'blue'} textAlign={'center'} fontSize={'80px'}><Spinner/></Box> 
+        :
+        <OrderedList>
         { 
         curriculum?.map((item,index)=>{
           console.log(index)
@@ -87,6 +89,7 @@ console.log(userDataDetails)
         })
         }
       </OrderedList>
+      }
   </Box>
 </Box>
 

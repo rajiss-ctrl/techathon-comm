@@ -1,12 +1,10 @@
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
-import { Spinner } from '@chakra-ui/react'
 import React from 'react'
 
 
 const ProgressCard = () => {
   return (
     <Box padding={'100px 0 100px 0 '} background={'rgb(229, 243, 255)'}>
-        <Spinner/>
         <Heading 
                 margin={['0 0 20px 0','0 0 50px 0']} 
                 fontSize={['12px','14px','16px','16px']} 

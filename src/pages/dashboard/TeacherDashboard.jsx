@@ -22,6 +22,22 @@ const { user } = useUserAuth();
 
 const {userDataDetails} = useContext(UserDetailsContext)
 console.log(userDataDetails)
+const NoName =()=>{
+  return(
+    <>
+{userDataDetails.map((i)=>{
+  return (
+   <div>
+     {i.displayName && user.uid === i.id ? <Heading fontSize={'20px'}>Welcome {i.displayName}</Heading>
+    : <Heading></Heading>
+    }
+   </div>
+  )
+
+})}
+</>
+  )
+}
 
 const [showModal,setShowModal] = useState(true)
 const [profileImg,setProfileImg] =useState(true);
@@ -82,17 +98,30 @@ const handleProfileImage = ()=>{
          {/* { dataDetails.map((item)=>{  <div key={item.id}><Topics key={item.id} item={item}/></div> }) } */}
         <Heading 
                 marginTop={['20px','0','0','0']} 
-                padding={['40px']} 
+                padding={['40px 40px 40px 15px']} 
                 textAlign={'center'} 
                 fontSize={['12px','14px','16px','16px']}
                 display={'flex'}
-                > <Text paddingLeft={''} display={user ? 'flex' : 'none'}> <pre style={{fontSize:'18px'}}>Welcome: </pre>  <Box>
-                    { userDataDetails?.map((item)=>{ return <Box key={item.id}>
-                      {item.displayName ? <Text display={'flex'}>
-                      {user.uid === item.id && <Box>{item.displayName}</Box> } 
-                      </Text> : <></>} 
-                </Box>}) } 
-                  </Box></Text> </Heading>
+                color={'rgb(9, 140, 100)'}
+                > <Text > <NoName/> 
+                  {/* <Box>
+                    
+                    { userDataDetails?.map((item)=>{ 
+                        return (
+                        <Box key={item.id}>
+                            {item.displayName && user.uid === item.id ?
+                            <Text display={'flex'}>
+                            <Box>{item.displayName}</Box> 
+                            </Text> 
+                            :
+                            ""
+                            } 
+                        </Box> )}) } 
+                        
+                  </Box> */}
+                    
+                  </Text>
+                   </Heading>
   
    <Topics dataDetails={dataDetails}/>
     <Box 
