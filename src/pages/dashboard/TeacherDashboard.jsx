@@ -22,7 +22,7 @@ const { user } = useUserAuth();
 
 const {userDataDetails} = useContext(UserDetailsContext)
 console.log(userDataDetails)
-const NoName =()=>{
+const Greet =()=>{
   return(
     <>
 {userDataDetails.map((i)=>{
@@ -54,26 +54,7 @@ const handleProfileUpdate =()=>{
 const handleProfileImage = ()=>{
   setProfileImg(!profileImg)
 }
-// //feching from usercollections
-// useEffect(()=>{
-//  const fetchData = async ()=>{
-//   let list = []
-//   try {
-//   const querySnapshot = await getDocs(collection(db,"user"));
-//   querySnapshot.forEach((doc)=>{
-//     console.log(doc)
-//     list.push({id:doc.id,...doc.data()})
-//   });
-//   setDataDetails(list)
-//   dispatch({payload:list})
-//   } catch (error) {
-//     console.log(error)
-//   }
 
-//  }
-//  fetchData()
-// },[])
-// console.log(dataDetails)
 
 
   return (
@@ -103,7 +84,7 @@ const handleProfileImage = ()=>{
                 fontSize={['12px','14px','16px','16px']}
                 display={'flex'}
                 color={'rgb(9, 140, 100)'}
-                > <Text > <NoName/> 
+                > <Text > <Greet/> 
                   {/* <Box>
                     
                     { userDataDetails?.map((item)=>{ 

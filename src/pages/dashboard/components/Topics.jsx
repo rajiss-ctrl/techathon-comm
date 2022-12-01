@@ -77,7 +77,7 @@ return (
           return (
         <ListItem onClick={()=>showOption(index)} key={item.id}  cursor={'pointer'} borderRadius={'5px'} paddingRight={show === index && '10px'} paddingLeft={'10px'} border={'1px solid'} borderColor={'#d2cefdf5'} marginBottom={'10px'}>
         <Flex  borderBottom={show === index && '2px solid #d2cefdf5'} width={'100%'} alignItems={'center'} justifyContent={'space-between'}>
-        <Text  fontFamily={'Red Rose'} fontSize={['12px','14px','16px','16px']} paddingLeft={['30px','30px','0','0']} width={'30%'}>{item.level}</Text>
+        <Text  fontFamily={'Red Rose'} fontSize={['12px','14px','16px','16px']} paddingLeft={['30px','30px','0','0']} width={'30%'}>{item.level.sort()}</Text>
         <Text  fontFamily={'Red Rose'} fontSize={['12px','14px','16px','16px']} width={'40%'} textAlign={'left'} >{item.topic}</Text>
         <Text fontFamily={'Red Rose'}  fontSize={['12px','14px','16px','16px']} ><Button color={'blue'}><FaEdit /></Button><Button color={'red'}><FaTrash/></Button></Text>
          </Flex>
