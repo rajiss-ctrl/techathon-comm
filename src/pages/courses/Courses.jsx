@@ -1,16 +1,8 @@
-import { Box, Text } from '@chakra-ui/react'
-import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
+import { Box } from "@chakra-ui/react";
+import React from "react";
 
-const Courses = ({isOpen,toggle}) => {
-  return (
-    <Box>
-        <Navbar isOpen={isOpen} toggle={toggle}/>
-        <Box height={'100vh'} onClick={isOpen && toggle}>
-          <Text marginTop={'80px'}>Heelllo</Text>
-        </Box>
-    </Box>
-  )
-}
+const Courses = () => {
+  return <Box>courses</Box>;
+};
 
-export default Courses
+export default Courses;

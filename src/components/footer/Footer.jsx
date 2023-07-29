@@ -1,48 +1,55 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
+import React from "react";
+import { FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
+import Flag from "../../assets/images/flag.jpg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <Box 
-        padding={['50px 20px','50px 20px','60px 50px','60px 50px']}
-        width={'100%'} 
-        color={'#ffffff'} 
-        background={' rgb(37, 39, 41)'} 
-        display={'flex'} 
-        justifyContent={'space-between'}
-        flexDirection={['column','column','row','row']}
-        >
-        <Box fontSize={['12px','14px','16px','16px']} marginTop={['30px','30px','0','0']}>
-            <Heading fontSize={['16px','17px','18px','18px']}>About Us</Heading>
-            <Text>Lorem ipsum dolor sit amet.</Text>
-            <Text>Lorem ipsum dolor sit amet.</Text>
-            <Text>Lorem ipsum dolor sit amet.</Text>
-            <Text>Lorem ipsum dolor sit amet.</Text>
-        </Box>
-        <Box fontSize={['12px','14px','16px','16px']} marginTop={['30px','30px','0','0']}>
-            <Text>Our Story.</Text>
-            <Text>Our Leadership</Text>
-            <Text>Thematic Program Areas</Text>
-            <Text>Our Team</Text>
-            <Text>Thought Leadership Council</Text>
-            <Text>For Teachers</Text>
-            <Text>For Parents</Text>
-            <Text>Testimony</Text>
-            <Text>FAQS</Text>
-        </Box>
-        <Box fontSize={['12px','14px','16px','16px']} marginTop={['30px','30px','0','0']}>
-            <Text>Our Story.</Text>
-            <Text>Our Leadership</Text>
-            <Text>Thematic Program Areas</Text>
-            <Text>Our Team</Text>
-            <Text>Thought Leadership Council</Text>
-            <Text>For Teachers</Text>
-            <Text>For Parents</Text>
-            <Text>Testimony</Text>
-            <Text>FAQS</Text>
-        </Box>
-    </Box>
-  )
-}
+    <Flex
+      mt="14em"
+      px={{ base: "1em", md: "6em" }}
+      py={14}
+      width={"100%"}
+      color={"#ffffff"}
+      bg={" rgb(0, 0, 0)"}
+      justifyContent={"space-between"}
+      flexDirection={["column", "column", "row", "row"]}
+    >
+      <Box>
+        <Flex alignItems="center" gap={2}>
+          <Image src={Flag} alt="flag" />
+          <Link to="/">
+            <Heading fontSize="1.5rem">R.I.S</Heading>
+          </Link>
+        </Flex>
+        <Text width="50%" py={8}>
+          So important to take care of your wards right education. Right
+          education is the best legacy!
+        </Text>
+        <a href="https://www.twitter.com/rajisanjo">From rajissCtrlTech</a>
 
-export default Footer
+        <Flex py={4} gap={2} color="white">
+          <FaTwitterSquare size="40px" />
+          <FaFacebookSquare size="40px" />
+        </Flex>
+      </Box>
+      <Box>
+        <Heading fontSize="1.5rem">Features</Heading>
+        <Box py={8}>
+          <Text>Creche</Text>
+          <Text>Pre-Basic education</Text>
+          <Text>Basic education</Text>
+          <Text>Junior secondary School</Text>
+          <Text>Senior Secondary School</Text>
+        </Box>
+      </Box>
+      <Box>About Us</Box>
+      <Box>Contact Us</Box>
+      <Box>Social Medial</Box>
+      <Box>Mgt</Box>
+    </Flex>
+  );
+};
+
+export default Footer;
